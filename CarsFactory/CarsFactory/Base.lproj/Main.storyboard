@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v71-0V-e6G">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CarsFactory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fabrica de Automóviles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Cl-a2-akF">
+                                <rect key="frame" x="20" y="163" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYl-m3-Gkk">
+                                <rect key="frame" x="20" y="268" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Crear Automóvil Sencillo"/>
+                                <connections>
+                                    <action selector="createSimpleCarAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uhp-vV-34P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W71-dc-75q">
+                                <rect key="frame" x="20" y="344" width="374" height="30"/>
+                                <state key="normal" title="Crear Automóvil Eléctrico"/>
+                                <connections>
+                                    <action selector="createElectricCarAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UTU-Hm-F1B"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZYl-m3-Gkk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0aT-TB-4B7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZYl-m3-Gkk" secondAttribute="trailing" constant="20" id="7cG-JL-s9c"/>
+                            <constraint firstItem="W71-dc-75q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GgX-wb-aaz"/>
+                            <constraint firstItem="9Cl-a2-akF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Nc8-yJ-4ya"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Cl-a2-akF" secondAttribute="trailing" constant="20" id="QkR-ja-XGS"/>
+                            <constraint firstItem="ZYl-m3-Gkk" firstAttribute="top" secondItem="9Cl-a2-akF" secondAttribute="bottom" constant="75" id="WTh-hB-tTr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W71-dc-75q" secondAttribute="trailing" constant="20" id="Z2S-IB-Okk"/>
+                            <constraint firstItem="9Cl-a2-akF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="pTG-pV-7Ge"/>
+                            <constraint firstItem="W71-dc-75q" firstAttribute="top" secondItem="ZYl-m3-Gkk" secondAttribute="bottom" constant="40" id="rF9-DV-qsH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jEY-yK-QPY">
+                        <barButtonItem key="backBarButtonItem" title="Volver" id="9ln-tC-sFm"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="u4g-BB-92j" kind="show" identifier="carInformationSegue" id="RT6-l1-17R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="69.642857142857139"/>
+        </scene>
+        <!--Car Information View Controller-->
+        <scene sceneID="WbG-61-Cmu">
+            <objects>
+                <viewController id="u4g-BB-92j" customClass="CarInformationViewController" customModule="CarsFactory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aem-c9-8Hf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KvA-lU-jRn">
+                                <rect key="frame" x="20" y="198" width="374" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="gdT-qN-ptc"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3m-Na-k15">
+                                <rect key="frame" x="20" y="423" width="374" height="30"/>
+                                <state key="normal" title="Encender"/>
+                                <connections>
+                                    <action selector="turnOnAction:" destination="u4g-BB-92j" eventType="touchUpInside" id="XhX-UJ-Oav"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dE-RF-Grl">
+                                <rect key="frame" x="20" y="493" width="374" height="30"/>
+                                <state key="normal" title="Apagar"/>
+                                <connections>
+                                    <action selector="turnOffAction:" destination="u4g-BB-92j" eventType="touchUpInside" id="Pt6-1d-8fY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQg-gt-M9Y">
+                                <rect key="frame" x="20" y="563" width="374" height="30"/>
+                                <state key="normal" title="Acelerar"/>
+                                <connections>
+                                    <action selector="accelerateAction:" destination="u4g-BB-92j" eventType="touchUpInside" id="GgJ-4g-paD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aqz-h0-0Ci">
+                                <rect key="frame" x="20" y="128" width="374" height="30"/>
+                                <state key="normal" title="Mostrar Información"/>
+                                <connections>
+                                    <action selector="showInformationAction:" destination="u4g-BB-92j" eventType="touchUpInside" id="LId-tN-1eV"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="G6p-DW-d7l">
+                                <rect key="frame" x="20" y="668" width="374" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="e8o-kg-B1k"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4CQ-dz-ZWW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4CQ-dz-ZWW" firstAttribute="trailing" secondItem="Aqz-h0-0Ci" secondAttribute="trailing" constant="20" id="5eX-KS-Jfu"/>
+                            <constraint firstItem="4CQ-dz-ZWW" firstAttribute="trailing" secondItem="cQg-gt-M9Y" secondAttribute="trailing" constant="20" id="6Tw-wM-GxD"/>
+                            <constraint firstItem="G6p-DW-d7l" firstAttribute="top" secondItem="cQg-gt-M9Y" secondAttribute="bottom" constant="75" id="DkX-lJ-FXl"/>
+                            <constraint firstItem="KvA-lU-jRn" firstAttribute="top" secondItem="Aqz-h0-0Ci" secondAttribute="bottom" constant="40" id="Fdo-ko-uoa"/>
+                            <constraint firstItem="Aqz-h0-0Ci" firstAttribute="top" secondItem="4CQ-dz-ZWW" secondAttribute="top" constant="40" id="Fuo-i0-HFM"/>
+                            <constraint firstItem="cQg-gt-M9Y" firstAttribute="top" secondItem="4dE-RF-Grl" secondAttribute="bottom" constant="40" id="JC6-BV-UBU"/>
+                            <constraint firstItem="KvA-lU-jRn" firstAttribute="leading" secondItem="4CQ-dz-ZWW" secondAttribute="leading" constant="20" id="RLe-rH-16h"/>
+                            <constraint firstItem="cQg-gt-M9Y" firstAttribute="leading" secondItem="4CQ-dz-ZWW" secondAttribute="leading" constant="20" id="RQn-Qu-Lht"/>
+                            <constraint firstItem="4CQ-dz-ZWW" firstAttribute="trailing" secondItem="4dE-RF-Grl" secondAttribute="trailing" constant="20" id="U5R-da-DTv"/>
+                            <constraint firstItem="G6p-DW-d7l" firstAttribute="leading" secondItem="4CQ-dz-ZWW" secondAttribute="leading" constant="20" id="Z8A-AM-uu3"/>
+                            <constraint firstItem="r3m-Na-k15" firstAttribute="top" secondItem="KvA-lU-jRn" secondAttribute="bottom" constant="75" id="ZcQ-l5-jrf"/>
+                            <constraint firstItem="4CQ-dz-ZWW" firstAttribute="trailing" secondItem="KvA-lU-jRn" secondAttribute="trailing" constant="20" id="aa5-zA-zYQ"/>
+                            <constraint firstItem="Aqz-h0-0Ci" firstAttribute="leading" secondItem="4CQ-dz-ZWW" secondAttribute="leading" constant="20" id="f0b-Pa-b7r"/>
+                            <constraint firstItem="4dE-RF-Grl" firstAttribute="top" secondItem="r3m-Na-k15" secondAttribute="bottom" constant="40" id="fG4-WP-Vlo"/>
+                            <constraint firstItem="4CQ-dz-ZWW" firstAttribute="trailing" secondItem="r3m-Na-k15" secondAttribute="trailing" constant="20" id="s1B-jr-0Sw"/>
+                            <constraint firstItem="4CQ-dz-ZWW" firstAttribute="trailing" secondItem="G6p-DW-d7l" secondAttribute="trailing" constant="20" id="vLZ-Q5-Lum"/>
+                            <constraint firstItem="4dE-RF-Grl" firstAttribute="leading" secondItem="4CQ-dz-ZWW" secondAttribute="leading" constant="20" id="wpO-D1-Zgy"/>
+                            <constraint firstItem="r3m-Na-k15" firstAttribute="leading" secondItem="4CQ-dz-ZWW" secondAttribute="leading" constant="20" id="zzc-NJ-KgN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wrM-dz-gqC"/>
+                    <connections>
+                        <outlet property="myCarImage" destination="KvA-lU-jRn" id="yMc-gF-Y5c"/>
+                        <outlet property="myInformationTextView" destination="G6p-DW-d7l" id="JhQ-nK-wsd"/>
+                        <outlet property="myToggleInformationButton" destination="Aqz-h0-0Ci" id="mKH-zB-5zK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X4A-wb-XKg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1843" y="70"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="b0z-9h-QbX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v71-0V-e6G" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hse-ra-aej">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HsY-tu-Eav"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kbP-NS-2Aa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
