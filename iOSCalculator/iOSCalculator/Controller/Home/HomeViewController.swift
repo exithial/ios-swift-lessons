@@ -12,9 +12,11 @@ final class HomeViewController: UIViewController {
     // MARK: - Outlets
     
     // Result
+    
     @IBOutlet weak var resultLabel: UILabel!
     
     // Numbers
+    
     @IBOutlet weak var number0: UIButton!
     @IBOutlet weak var number1: UIButton!
     @IBOutlet weak var number2: UIButton!
@@ -28,6 +30,7 @@ final class HomeViewController: UIViewController {
     @IBOutlet weak var numberDecimal: UIButton!
     
     // Operators
+    
     @IBOutlet weak var operatorAC: UIButton!
     @IBOutlet weak var operatorPlusMinus: UIButton!
     @IBOutlet weak var operatorPercent: UIButton!
@@ -38,6 +41,7 @@ final class HomeViewController: UIViewController {
     @IBOutlet weak var operatorDivision: UIButton!
     
     // MARK: - Initialization
+    
     init() {
         super.init(nibName: nil, bundle: nil)
     }
@@ -47,9 +51,42 @@ final class HomeViewController: UIViewController {
     }
     
     // MARK: - Life Cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    // MARK: - Button Actions
+    
+    @IBAction func operatorACAction(_ sender: Any) {
+    }
+    
+    @IBAction func operatorPlusMinusAction(_ sender: Any) {
+    }
+    
+    @IBAction func operatorPercentAction(_ sender: Any) {
+    }
+    
+    @IBAction func operatorResultAction(_ sender: Any) {
+    }
+    
+    @IBAction func operatorAdditionAction(_ sender: Any) {
+    }
+    
+    @IBAction func operatorSubstractionAction(_ sender: Any) {
+    }
+    
+    @IBAction func operatorMultiplicationAction(_ sender: Any) {
+    }
+    
+    @IBAction func operatorDivisionAction(_ sender: Any) {
+    }
+    
+    @IBAction func numberDecimalAction(_ sender: Any) {
+    }
+    
+    @IBAction func numberAction(_ sender: UIButton) {
+        print(sender.tag)
+    }
+    
 }
