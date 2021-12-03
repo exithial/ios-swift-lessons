@@ -394,6 +394,7 @@
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="vhq-wr-bk6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="12U-Ao-7nG"/>
+                <constraint firstItem="zNP-pH-89m" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2zc-g7-t8y"/>
                 <constraint firstItem="zNP-pH-89m" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" priority="900" constant="18" id="3sv-5u-f2n"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zNP-pH-89m" secondAttribute="trailing" priority="900" constant="18" id="5DD-0U-hfp"/>
                 <constraint firstItem="zNP-pH-89m" firstAttribute="top" secondItem="vhq-wr-bk6" secondAttribute="bottom" constant="30" id="XLz-vp-Mrf"/>
