@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA78C6832760135500F9CC44 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA78C6822760135500F9CC44 /* ImageView.swift */; };
 		BAD16461276009FB00B971E5 /* SwiftUITutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD16460276009FB00B971E5 /* SwiftUITutorialApp.swift */; };
 		BAD16463276009FB00B971E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD16462276009FB00B971E5 /* ContentView.swift */; };
 		BAD16465276009FD00B971E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAD16464276009FD00B971E5 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA78C6822760135500F9CC44 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		BAD1645D276009FB00B971E5 /* Swift UI Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift UI Tutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD16460276009FB00B971E5 /* SwiftUITutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITutorialApp.swift; sourceTree = "<group>"; };
 		BAD16462276009FB00B971E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				BAD16460276009FB00B971E5 /* SwiftUITutorialApp.swift */,
 				BAD16462276009FB00B971E5 /* ContentView.swift */,
+				BA78C6822760135500F9CC44 /* ImageView.swift */,
 				BAD16464276009FD00B971E5 /* Assets.xcassets */,
 				BAD16466276009FD00B971E5 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA78C6832760135500F9CC44 /* ImageView.swift in Sources */,
 				BAD16463276009FB00B971E5 /* ContentView.swift in Sources */,
 				BAD16461276009FB00B971E5 /* SwiftUITutorialApp.swift in Sources */,
 			);
