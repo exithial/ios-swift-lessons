@@ -24,6 +24,10 @@ struct RowView: View {
                     .font(.subheadline)
             }
             Spacer()
+            if programmer.favorite {
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+            }
         }
     }
 }
@@ -35,7 +39,8 @@ struct RowView_Previews: PreviewProvider {
                 id: 1,
                 name: "Enrique Solis",
                 languages: "Swift, Kotlin, React Native",
-                avatar: Image(systemName: "person.fill")
+                avatar: Image(systemName: "person.fill"),
+                favorite: true
             ))
             .previewLayout(.fixed(width: 400, height: 60))
     }
