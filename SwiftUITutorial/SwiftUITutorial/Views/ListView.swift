@@ -8,7 +8,7 @@
 import SwiftUI
 
 private let programmers = [
-    Programmer(id: 1, name: "Enrique Solis", languages: "Swift, Kotlin, React Native", avatar: Image(systemName: "person.fill")),
+    Programmer(id: 1, name: "Enrique Solis", languages: "Swift, Kotlin, React Native", avatar: Image(systemName: "person")),
     Programmer(id: 2, name: "Lino Botto", languages: "Swift, React Native, Java", avatar: Image(systemName: "person.fill")),
     Programmer(id: 3, name: "Damian Fernandez", languages: "PHP, React Native", avatar: Image(systemName: "person.fill")),
     Programmer(id: 4, name: "Matias Urrutia", languages: "React Native, React JS", avatar: Image(systemName: "person.fill")),
@@ -17,8 +17,13 @@ private let programmers = [
 
 struct ListView: View {
     var body: some View {
-        List(programmers, id: \.id) { programmer in
-            RowView(programmer: programmer)
+        NavigationView {
+            List(programmers, id: \.id) { programmer in
+                NavigationLink(destination: ListDetailView(programmer: programmer)) {
+                    RowView(programmer: programmer)
+                }
+            }
+            .navigationTitle("Programmers")
         }
     }
 }
