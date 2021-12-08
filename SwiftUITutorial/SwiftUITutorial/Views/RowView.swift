@@ -27,6 +27,9 @@ struct RowView: View {
             if programmer.favorite {
                 Image(systemName: "star.fill")
                     .foregroundColor(.yellow)
+            } else {
+                Image(systemName: "star")
+                    .foregroundColor(.black)
             }
         }
     }

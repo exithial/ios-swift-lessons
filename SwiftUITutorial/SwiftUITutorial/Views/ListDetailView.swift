@@ -10,6 +10,7 @@ import SwiftUI
 struct ListDetailView: View {
     
     var programmer: Programmer
+    @Binding var favorite: Bool
     
     var body: some View {
         VStack {
@@ -21,8 +22,23 @@ struct ListDetailView: View {
                     Circle().stroke(Color.black, lineWidth: 4)
                 )
                 .shadow(color: Color.gray, radius: 5)
-            Text(programmer.name)
-                .font(.largeTitle)
+            HStack {
+                Text(programmer.name)
+                    .font(.largeTitle)
+                Button {
+                    favorite.toggle()
+                } label: {
+                    if favorite {
+                        Image(systemName: "star.fill")
+                            .foregroundColor(.yellow)
+
+                    } else {
+                        Image(systemName: "star")
+                            .foregroundColor(.black)
+
+                    }
+                }
+            }
             Text(programmer.languages)
                 .font(.title)
             Spacer()
@@ -38,6 +54,6 @@ struct ListDetailView_Previews: PreviewProvider {
             languages: "Swift, Kotlin, React Native",
             avatar: Image(systemName: "person.fill"),
             favorite: true
-        ))
+        ), favorite: .constant(false))
     }
 }
