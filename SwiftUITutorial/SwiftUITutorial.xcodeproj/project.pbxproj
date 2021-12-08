@@ -14,6 +14,9 @@
 		BA78C68D27601F3400F9CC44 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA78C68C27601F3400F9CC44 /* RowView.swift */; };
 		BA78C68F276021B200F9CC44 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA78C68E276021B200F9CC44 /* ListView.swift */; };
 		BA78C6912760244400F9CC44 /* ListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA78C6902760244400F9CC44 /* ListDetailView.swift */; };
+		BA78C694276030F600F9CC44 /* StateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA78C693276030F600F9CC44 /* StateView.swift */; };
+		BA78C6962760319B00F9CC44 /* BindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA78C6952760319B00F9CC44 /* BindingView.swift */; };
+		BA78C6982760362000F9CC44 /* EnvironmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA78C6972760362000F9CC44 /* EnvironmentView.swift */; };
 		BAD16461276009FB00B971E5 /* SwiftUITutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD16460276009FB00B971E5 /* SwiftUITutorialApp.swift */; };
 		BAD16463276009FB00B971E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD16462276009FB00B971E5 /* ContentView.swift */; };
 		BAD16465276009FD00B971E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAD16464276009FD00B971E5 /* Assets.xcassets */; };
@@ -28,6 +31,9 @@
 		BA78C68C27601F3400F9CC44 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		BA78C68E276021B200F9CC44 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		BA78C6902760244400F9CC44 /* ListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailView.swift; sourceTree = "<group>"; };
+		BA78C693276030F600F9CC44 /* StateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
+		BA78C6952760319B00F9CC44 /* BindingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingView.swift; sourceTree = "<group>"; };
+		BA78C6972760362000F9CC44 /* EnvironmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentView.swift; sourceTree = "<group>"; };
 		BAD1645D276009FB00B971E5 /* Swift UI Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift UI Tutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD16460276009FB00B971E5 /* SwiftUITutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITutorialApp.swift; sourceTree = "<group>"; };
 		BAD16462276009FB00B971E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +74,16 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		BA78C692276030D500F9CC44 /* PropertyWrappers */ = {
+			isa = PBXGroup;
+			children = (
+				BA78C693276030F600F9CC44 /* StateView.swift */,
+				BA78C6952760319B00F9CC44 /* BindingView.swift */,
+				BA78C6972760362000F9CC44 /* EnvironmentView.swift */,
+			);
+			path = PropertyWrappers;
+			sourceTree = "<group>";
+		};
 		BAD16454276009FB00B971E5 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				BAD16460276009FB00B971E5 /* SwiftUITutorialApp.swift */,
+				BA78C692276030D500F9CC44 /* PropertyWrappers */,
 				BA78C68927601ED100F9CC44 /* Data */,
 				BA78C68827601EAB00F9CC44 /* Views */,
 				BAD16464276009FD00B971E5 /* Assets.xcassets */,
@@ -175,7 +192,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA78C68F276021B200F9CC44 /* ListView.swift in Sources */,
+				BA78C6962760319B00F9CC44 /* BindingView.swift in Sources */,
 				BA78C6832760135500F9CC44 /* ImageView.swift in Sources */,
+				BA78C694276030F600F9CC44 /* StateView.swift in Sources */,
+				BA78C6982760362000F9CC44 /* EnvironmentView.swift in Sources */,
 				BA78C68B27601EE100F9CC44 /* Programmer.swift in Sources */,
 				BA78C68D27601F3400F9CC44 /* RowView.swift in Sources */,
 				BA78C6852760182F00F9CC44 /* MapView.swift in Sources */,
