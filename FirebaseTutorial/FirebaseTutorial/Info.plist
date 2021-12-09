@@ -12,6 +12,14 @@
 				<string>com.googleusercontent.apps.503479683074-lbgfe84jqv8aqntr0160762bq4ktl3le</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb581572666473881</string>
+			</array>
+		</dict>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
@@ -32,5 +40,29 @@
 			</array>
 		</dict>
 	</dict>
+	<key>FacebookAppID</key>
+	<string>581572666473881</string>
+	<key>FacebookClientToken</key>
+	<string>d75b6575f564b3bf7777af0b2c618e76</string>
+	<key>FacebookDisplayName</key>
+	<string>FirebaseTutorial</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fbapi20130214</string>
+		<string>fbapi20130410</string>
+		<string>fbapi20130702</string>
+		<string>fbapi20131010</string>
+		<string>fbapi20131219</string>
+		<string>fbapi20140410</string>
+		<string>fbapi20140116</string>
+		<string>fbapi20150313</string>
+		<string>fbapi20150629</string>
+		<string>fbapi20160328</string>
+		<string>fbauth</string>
+		<string>fb-messenger-share-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
 </dict>
 </plist>

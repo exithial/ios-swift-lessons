@@ -8,10 +8,12 @@
 import UIKit
 import FirebaseAuth
 import GoogleSignIn
+import FacebookLogin
 
 enum ProviderType: String {
     case basic
     case google
+    case facebook
 }
 
 class HomeViewController: UIViewController {
@@ -58,13 +60,19 @@ class HomeViewController: UIViewController {
         defaults.synchronize()
         
         switch provider {
-            case .basic:
-                firebaseLogOut()
+        case .basic:
+            firebaseLogOut()
+            break
+            
+        case .google:
+            GIDSignIn.sharedInstance.signOut()
+            firebaseLogOut()
                 break
-            case .google:
-                GIDSignIn.sharedInstance.signOut()
-                firebaseLogOut()
-                break
+            
+        case .facebook:
+            LoginManager().logOut()
+            firebaseLogOut()
+            break
         }
         
         navigationController?.popViewController(animated: true)

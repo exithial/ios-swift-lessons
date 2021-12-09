@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import FacebookCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,13 +21,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Firebase
         FirebaseApp.configure()
         
+        // Facebook
+        ApplicationDelegate.shared.application(
+             application,
+             didFinishLaunchingWithOptions: launchOptions
+         )
+        
         return true
     }
     
     func application(_ application: UIApplication, open url: URL,
                      options: [UIApplication.OpenURLOptionsKey: Any])
       -> Bool {
-          return GIDSignIn.sharedInstance.handle(url)
+          return GIDSignIn.sharedInstance.handle(url) || ApplicationDelegate.shared.application(
+            application,
+            open: url,
+            sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+            annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+        )
     }
 
     // MARK: UISceneSession Lifecycle

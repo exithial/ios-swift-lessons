@@ -10,6 +10,7 @@ import Firebase
 import FirebaseAnalytics
 import FirebaseAuth
 import GoogleSignIn
+import FacebookLogin
 
 class AuthViewController: UIViewController {
     
@@ -19,7 +20,8 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var googleButton: UIButton!
-
+    @IBOutlet weak var facebookButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,10 +35,10 @@ class AuthViewController: UIViewController {
                 "message": "Integración de Firebase completa"
             ]
         )
-        
-        let googleLogo = UIImage(named: "google-logo")!.resize(maxWidthHeight: 30)
     
-        googleButton.setImage(googleLogo, for: .normal)
+        googleButton.setImage(UIImage(named: "google-logo")!.resize(maxWidthHeight: 30), for: .normal)
+        
+        facebookButton.setImage(UIImage(named: "facebook-logo")!.resize(maxWidthHeight: 30), for: .normal)
         
         // Comprobar la sesión del usuario autenticado
         let defaults = UserDefaults.standard
@@ -98,6 +100,27 @@ class AuthViewController: UIViewController {
                 }
             }
 
+        }
+    }
+    
+    @IBAction func facebookButtonAction(_ sender: Any) {
+        let loginManager = LoginManager()
+        loginManager.logOut()
+        
+        loginManager.logIn(permissions: [.email], viewController: self) {
+            result in
+            
+            switch result {
+            case .success(granted: _, declined: _, token: let token):
+                let credential = FacebookAuthProvider.credential(withAccessToken: token!.tokenString)
+                Auth.auth().signIn(with: credential) { result, error in
+                    self.showHome(result: result, error: error, provider: .facebook)
+                }
+            case .cancelled:
+                break
+            case .failed(_):
+                break
+            }
         }
     }
     

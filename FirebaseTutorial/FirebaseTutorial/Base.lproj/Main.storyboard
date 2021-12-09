@@ -32,7 +32,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7ZP-Z1-QzL">
-                                <rect key="frame" x="16" y="104" width="382" height="184"/>
+                                <rect key="frame" x="16" y="104" width="382" height="232"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z8z-KN-1p5">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
@@ -82,6 +82,16 @@
                                             <action selector="googleButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BWC-DD-FVx"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paG-OI-D1K">
+                                        <rect key="frame" x="0.0" y="192" width="382" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.17254901959999999" green="0.21960784310000001" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="person.circle.fill" catalog="system" title="Facebook" imagePadding="10"/>
+                                        <connections>
+                                            <action selector="facebookButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AEk-IK-pgO"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -97,7 +107,8 @@
                     <connections>
                         <outlet property="authStackView" destination="7ZP-Z1-QzL" id="WWR-5g-xSb"/>
                         <outlet property="emailTextField" destination="z8z-KN-1p5" id="Isg-2a-fty"/>
-                        <outlet property="googleButton" destination="OFn-e6-D31" id="EdA-3e-a7u"/>
+                        <outlet property="facebookButton" destination="paG-OI-D1K" id="8QO-Xe-ytI"/>
+                        <outlet property="googleButton" destination="OFn-e6-D31" id="Ehs-2v-Tqo"/>
                         <outlet property="logInButton" destination="3AL-v6-RYB" id="lZy-C3-hiu"/>
                         <outlet property="passwordTextField" destination="gjW-bf-y8j" id="Bs9-kj-yhW"/>
                         <outlet property="signUpButton" destination="PAu-8x-73d" id="NFJ-bi-neO"/>
@@ -110,5 +121,6 @@
     </scenes>
     <resources>
         <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>
